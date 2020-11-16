@@ -54,9 +54,6 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000/',
-]
 
 ROOT_URLCONF = 'backend_api.urls'
 
@@ -132,5 +129,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
 
 django_heroku.settings(locals())
