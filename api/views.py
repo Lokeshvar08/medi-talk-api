@@ -9,6 +9,17 @@ from api.serializers import DoctorSerializer
 
 
 @api_view(['GET'])
+def routes(request):
+    api_urls = {
+        'doctors': '/api/',
+        'doctors sorted with specialisation': '/api/doctors/<specialisation>/',
+        'doctors sorted with location and specialisation': '/api/doctors/<location>/<specialisation>/',
+        'create a doctor': '/api/doctor-create/',
+    }
+    return Response(api_urls)
+
+
+@api_view(['GET'])
 def get_doctors(request):
     doctors = Doctor.objects.all().order_by('-average_rating')
     serializer = DoctorSerializer(doctors, many=True)
