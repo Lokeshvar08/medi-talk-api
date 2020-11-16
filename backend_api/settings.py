@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'd!&99bglzg4o@h+=lufw&$s_8x7j7ko#$@f#c5^_5fj8t6+i!7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['medi-talk.herokuapp.com', '127.0.0.1']
 
