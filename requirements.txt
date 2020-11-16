@@ -10,3 +10,5 @@ pytz==2020.1
 sqlparse==0.4.1
 whitenoise==5.2.0
 wincertstore==0.2
+django-cors-headers==3.5.0
+
