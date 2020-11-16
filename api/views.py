@@ -9,6 +9,13 @@ from api.serializers import DoctorSerializer
 
 
 @api_view(['GET'])
+def get_doctors(request):
+    doctors = Doctor.objects.all().order_by('-average_rating')
+    serializer = DoctorSerializer(doctors, many=True)
+    return Response(serializer.data, status=200)
+
+
+@api_view(['GET'])
 def get_doctor_location(request, specialisation):
     doctors = Doctor.objects.filter(specialisation=specialisation).order_by('-average_rating')
     serializer = DoctorSerializer(doctors, many=True)

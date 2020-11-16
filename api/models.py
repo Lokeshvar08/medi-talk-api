@@ -15,3 +15,17 @@ class Doctor(models.Model):
 
     def __str__(self):
         return self.name
+
+
+"""
+    {
+    "name":"Lokeshvar",
+    "specialisation":"dentist",
+    "hospital": "Government Hospital",
+    "location": "coimbatore",
+    "application_rating":4.0,
+    "google_rating": 3.8,
+    "article_rating": 4.2,
+    "average_rating": 4.0
+    }
+"""
